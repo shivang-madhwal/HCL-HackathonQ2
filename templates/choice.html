@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scaled = 1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/logo.css">
+
+    <title>Preferences</title>
+    <style >[type=radio] { 
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      /* IMAGE STYLES */
+      [type=radio] + img {
+        cursor: pointer;
+      }
+
+      /* CHECKED STYLES */
+      [type=radio]:checked + img {
+        outline: 5px solid #334CFF;
+      }
+</style>
+</head>
+<body class="bg-gray-900">
+
+  <header class="text-gray-500 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <svg xmlns="" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl" style="position: relative; left: 40px;">What do you like?</span>
+      </a>
+
+        <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0" style=" position: absolute; left: 41%; transform: translateX(-50%);">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 300" class="text-gray-500 bg-gray-900 body-font" id="yaha">
+
+          <!-- Symbol -->
+          <symbol id="s-text">
+            <text text-anchor="middle"
+                    x="50%" y="50%" dy=".35em">
+                LOTTERY
+             </text>
+          </symbol>
+        
+          <!-- Duplicate symbols -->
+          <use xlink:href="#s-text" class="text"
+                    ></use>
+          <use xlink:href="#s-text" class="text"
+                    ></use>
+          <use xlink:href="#s-text" class="text"
+                    ></use>
+          <use xlink:href="#s-text" class="text"
+                    ></use>
+          <use xlink:href="#s-text" class="text"
+                    ></use>
+        
+        </svg>
+      </a>
+
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <!-- <a href="/" class="mr-5 hover:text-white">Home</a>  -->
+        <!-- <a class="mr-5 hover:text-white">Contact</a> -->
+      </nav>  
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="text-gray-500 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col">
+        <div class="h-1 bg-gray-800 rounded overflow-hidden">
+          <div class="w-24 h-full bg-indigo-500"></div>
+        </div>
+      </div>
+
+  <section class="text-gray-500 bg-gray-900 body-font" style="position: relative; top: -85px;">
+            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0" >Your fav Superhero?</h1>
+        </div>
+    <form action="{{ url_for('choice') }}" method="POST">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap -m-4">
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+            <input type="radio" id="Ironman" name="heroes" value="Ironman" required>
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRrlALsspZM0QwSkXRFeYO5kYw3En2Y7GzIH1YiHob5wGqY6e38&usqp=CAU">
+          </label>
+          <div class="mt-4">
+          <h3>Iron Man</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+          <input type="radio" id="Captain America" name="heroes" value="Captain America">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://wallpaperaccess.com/full/1307358.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>Captain America</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+          <input type="radio" id="Wonder Woman" name="heroes" value="Wonder Woman">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://1.bp.blogspot.com/-trcKWijc_As/XfFeDjQkLCI/AAAAAAAASVU/ClBbiH4JShExKnAJ7llv6IdEP2Xi_NyZgCLcBGAsYHQ/w914-h514-p-k-no-nu/wonder-woman-1984-movie-art-uhdpaper.com-4K-7.617-wp.thumbnail.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>Wonder Woman</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+           <input type="radio" id="Superman" name="heroes" value="Superman">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://images4.alphacoders.com/209/209416.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>Superman</h3><br>
+          </div>
+          </div>
+      </div>
+    </div>
+  <!-- </form> -->
+  </section>
+
+  <section class="text-gray-500 bg-gray-900 body-font" style="position: relative; top: -85px;">
+            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0" >Your fav TV Series?</h1>
+        </div>
+    <form>
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap -m-4">
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+            <input type="radio" id="Game of Thrones" name="TV-Series" value="Game of Thrones" required>
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://www.desktopbackground.org/p/2014/07/18/795296_game-of-thrones-backgrounds-wallpapers_1600x900_h.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>Game Of  Thrones</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+          <input type="radio" id="Money Heist" name="TV-Series" value="Money Heist" required>
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://images.wallpapersden.com/image/download/money-heist_66878_3840x2232.jpg" >
+          </label>
+          <div class="mt-4">
+          <h3>Money Heist</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+          <input type="radio" id="Peaky Blinders" name="TV-Series" value="Peaky Blinders">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://img.wallpapersafari.com/desktop/1600/900/43/49/qIHcfz.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>Peaky Blinders</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+           <input type="radio" id="13 Reasons Why" name="TV-Series" value="13 reasons Why">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://images.alphacoders.com/829/thumb-1920-829130.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>13 Reasons Why</h3><br>
+          </div>
+          </div>
+      </div>
+    </div>
+  <!-- </form> -->
+  </section>
+
+  <section class="text-gray-500 bg-gray-900 body-font" style="position: relative; top: -85px;">
+            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0" >Your fav Anime Character?</h1>
+        </div>
+    <form>
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap -m-4">
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+            <input type="radio" id="Goku" name="Anime" value="Goku" required>
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/1-goku-super-saiyan-babbal-kumar.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>Goku</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+          <input type="radio" id="Naruto" name="Anime" value="Naruto">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://wallpaperaccess.com/full/493947.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>Naruto</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+          <input type="radio" id="Pokemon" name="Anime" value="Pokemon">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://media.comicbook.com/2016/08/ash-ketchum-194535.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>Ash Ketchum</h3><br>
+          </div>
+          </div>
+          <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+           <input type="radio" id="Death Note" name="Anime" value="Death Note">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://vignette.wikia.nocookie.net/deathnote/images/8/83/Lawliet-L-Cole.png/revision/latest?cb=20170907105910">
+          </label>
+          <div class="mt-4">
+          <h3>Death Note</h3><br>
+          </div>
+          </div>
+      </div>
+    </div>
+  <!-- </form> -->
+  </section>
+
+  
+  <section class="text-gray-500 bg-gray-900 body-font" style="position: relative; top: -85px;">
+            <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+          <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0" >Your fav Game?</h1>
+        </div>
+    <form>
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+          <input type="radio" id="PUBG" name="Game" value="PUBG" required>
+          <img alt="pic" class="object-cover object-center w-full h-full block" src="https://i.gadgets360cdn.com/large/pubg-ps4_1541482351295.jpg">
+          </label>
+            <div class="mt-4">
+              <h3> PUBG</h3><br>
+            </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+         <label>
+          <input type="radio" id="God Of War" name="Game" value="God Of War">
+          <img alt="pic" class="object-cover object-center w-full h-full block" src="https://d1pqlgpcx1bu0k.cloudfront.net/static/img/GOW-OG-image.jpg">
+         </label>   
+          <div class="mt-4">
+          <h3>God Of War<h3><br>
+          </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <label>
+            <input type="radio" id="GTA-V" name="Game" value="GTA-V">
+            <img alt="pic" class="object-cover object-center w-full h-full block" src="https://images.hindustantimes.com/tech/img/2020/05/16/960x540/GTA-5_1589635868004_1589635868409.jpg">
+            </label>
+            <div class="mt-4">
+            <h3>Grand Theft Auto V</h3><br>
+            </div>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+          <label>
+          <input type="radio" id="CyberPunk" name="Game" value="CyberPunk">
+          <img alt="pic" class="object-cover object-center w-full h-full block" src="https://images.firstpost.com/wp-content/uploads/2019/06/cyberpunk-2077-keanu-reeves.jpg">
+          </label>
+          <div class="mt-4">
+          <h3>CyberPunk 2077</h3><br>
+          </div>
+        </div>
+        
+        <input type="submit" value="Proceed" class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 hover:text-white" style=" position: relative; left: 50%; transform: translateX(-50%); top: 80px;">
+      </div>
+    </div>
+  </form>
+  </section>
+</body>
+</html>
